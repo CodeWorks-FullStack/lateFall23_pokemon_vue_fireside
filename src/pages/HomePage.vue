@@ -3,9 +3,14 @@
     <section class="row">
       <div class="col-12 d-flex align-items-center">
         <h1>Pokemons</h1>
-        <button :disabled="!previousPage" @click="changePage(previousPage)"
-          class="btn btn-outline-dark ms-3">Previous</button>
-        <button :disabled="!nextPage" @click="changePage(nextPage)" class="btn btn-outline-dark ms-3">Next</button>
+
+        <button :disabled="!previousPage" @click="changePage(previousPage)" class="btn btn-outline-dark ms-3">
+          Previous
+        </button>
+        <button :disabled="!nextPage" @click="changePage(nextPage)" class="btn btn-outline-dark ms-3">
+          Next
+        </button>
+
       </div>
     </section>
     <section class="row">

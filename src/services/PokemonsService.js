@@ -13,7 +13,7 @@ class PokemonsService {
   }
 
   async changePage(pageURL) {
-    const response = await pokeApi.get(pageURL)
+    const response = await pokeApi.get(pageURL) // NOTE if you pass an enitre URL to axios as the first argument, it will ignore the baseURL and use the supplied URL instead
     logger.log('GOT A DIFFERENT PAGE OF POKEMONS', response.data)
     AppState.pokemons = response.data.results
     AppState.nextPage = response.data.next
@@ -21,7 +21,7 @@ class PokemonsService {
   }
 
   async getPokemonByUrl(pokemonURL) {
-    const response = await pokeApi.get(pokemonURL)
+    const response = await pokeApi.get(pokemonURL) // NOTE if you pass an enitre URL to axios as the first argument, it will ignore the baseURL and use the supplied URL instead
     logger.log('GOT A POKEMON BY URL', response.data)
     AppState.activePokemon = new Pokemon(response.data)
   }
